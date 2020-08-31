@@ -1,0 +1,32 @@
+@charset "UTF-8";
+	#sidebar {
+		background: #EC7357;
+		width: 400px;
+		height: 100%;
+		top: 0;
+		left: -400px;
+		position: fixed;
+	}
+	#sidebar > ul {
+		margin:0;
+		padding: 0;
+		top:50px;
+		left:70px;
+		position: absolute;
+	}
+	#sidebar li {
+		margin: 0 0 20px;
+		list-style: none;
+	}
+	#sidebar > button {
+		background: rgb(192, 192, 192);
+		position: absolute;
+		top: 150px;
+		left: 400px;
+		width: 52px;
+		height: 52px;
+		border: none;
+		color: black;
+	}
+
+
