@@ -33,7 +33,7 @@ $(document).ready(function() {
 			</div>
 		</div>
 		<div class="form-group ml-3" >
-			<button onclick="location.href='${pageContext.request.contextPath}/login/user/user_loginform.jsp'" class="btn-lg btn-block  btn-warning text-center" type="submit" >회원 전용 로그인</button>
+			<button onclick="location.href='${pageContext.request.contextPath}/login/user/user_loginform.do'" class="btn-lg btn-block  btn-warning text-center" type="submit" >회원 전용 로그인</button>
 			<div class="container border border-primary rounded" >
 			<p class="text-center mt-5 mb-5" style="margin: 0 auto;">회원전용 로그인 입니다.</p>
 			</div>

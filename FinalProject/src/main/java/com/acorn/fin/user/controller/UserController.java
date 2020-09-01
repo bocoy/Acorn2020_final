@@ -1,8 +1,10 @@
 package com.acorn.fin.user.controller;
 
+import java.net.URLEncoder;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -59,4 +61,16 @@ public class UserController {
 		userService.addUser(dto);
 		return "signup/user_signup";
 	}
+	
+	@RequestMapping("/login/user/user_login")
+	public ModelAndView UserLogin(UserDto dto, ModelAndView mView, HttpSession session, HttpServletRequest request) {
+		String url=request.getParameter("url");
+		String encodedUrl=URLEncoder.encode(url); 
+		mView.addObject("url", url);
+		mView.addObject("encodedUrl", encodedUrl);
+		userService.loginProcess(dto, mView, session);
+		mView.setViewName("login/user/user_login");
+		return mView;
+	}
+
 }

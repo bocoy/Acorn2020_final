@@ -11,4 +11,9 @@
 		(id, pwd, name, email, birth, regdate)
 		VALUES (#{id}, #{pwd}, #{name}, #{email}, #{birth}, SYSDATE)
 	</insert>
+	<select id="getData" parameterType="string" resultType="userDto">
+		SELECT id, pwd, name, email, birth, regdate
+		FROM users
+		WHERE id=#{id}
+	</select>
 </mapper>

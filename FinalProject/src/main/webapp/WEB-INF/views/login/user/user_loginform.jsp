@@ -44,7 +44,7 @@
 		<button id="login_btn"  type="submit" class="btn btn-primary btn-lg btn-block mx-auto col-5">LOGIN</button>
 	</div>
 	</form>
-	<button onclick="location.href='${pageContext.request.contextPath}/jsp/signup/signup_form_user.jsp'" class="btn btn-dark btn-lg btn-block mx-auto col-5 mt-3">회원가입</button>
+	<button onclick="location.href='${pageContext.request.contextPath}/signup/signup_form_user.jsp'" class="btn btn-dark btn-lg btn-block mx-auto col-5 mt-3">회원가입</button>
 </div>
 
 
