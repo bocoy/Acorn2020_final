@@ -10,7 +10,7 @@
 <body>
 <script>
 	alert('회원가입이 완료되었습니다.');
-	location.href("${pageContext.request.contextPath }/home.do");
+	location.href="../home.do";
 </script>
 </body>
 </html>

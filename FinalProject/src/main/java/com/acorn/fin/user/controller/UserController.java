@@ -55,8 +55,7 @@ public class UserController {
 	}
 	
 	@RequestMapping("/signup/user_signup")
-	public String user_signup(UserDto dto) {
-		System.out.println(dto.getId());
+	public String UserSignup(UserDto dto) {
 		userService.addUser(dto);
 		return "signup/user_signup";
 	}

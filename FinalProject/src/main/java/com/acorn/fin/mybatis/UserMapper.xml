@@ -9,6 +9,6 @@
 	<insert id="addUser" parameterType="userDto">
 		INSERT INTO users
 		(id, pwd, name, email, birth, regdate)
-		VALUES (#{id}, #{pwd}, #{name}, #{email}, #{birth}, #{regdate})
+		VALUES (#{id}, #{pwd}, #{name}, #{email}, #{birth}, SYSDATE)
 	</insert>
 </mapper>

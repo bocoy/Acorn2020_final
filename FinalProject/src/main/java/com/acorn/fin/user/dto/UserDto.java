@@ -8,16 +8,6 @@ public class UserDto {
 	private String email;
 	private int birth;
 	private String regdate;
-	public UserDto(String id, String pwd, String pwd2, String name, String email, int birth, String regdate) {
-		super();
-		this.id = id;
-		this.pwd = pwd;
-		this.pwd2 = pwd2;
-		this.name = name;
-		this.email = email;
-		this.birth = birth;
-		this.regdate = regdate;
-	}
 	public String getId() {
 		return id;
 	}
@@ -60,5 +50,6 @@ public class UserDto {
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
+	
 	
 }

@@ -24,6 +24,5 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public void addUser(UserDto dto) {
 		session.insert("userMapper.addUser", dto);
-		
 	}
 }

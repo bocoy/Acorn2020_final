@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.acorn.fin.user.dao.UserDao;
@@ -24,6 +25,10 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void addUser(UserDto dto) {
+		String inputPwd=dto.getPwd();
+		BCryptPasswordEncoder encoder=new BCryptPasswordEncoder();
+		String encodedPwd=encoder.encode(inputPwd);
+		dto.setPwd(encodedPwd);
 		userDao.addUser(dto);
 	}
 }
