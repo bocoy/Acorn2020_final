@@ -12,7 +12,7 @@
 </style>
 
 	<nav style=" background-color: rgba(251, 255, 185, 0.8);" class="navbar navbar-expand-sm sticky-top ">
-		<a class="navbar-brand mt-2 mb-2" style="font-family: 'jua'; color: #FFBF00; margin-left:15%; font-size: 25px;"  href="${pageContext.request.contextPath}/index.jsp">COUPKEEP</a>
+		<a class="navbar-brand mt-2 mb-2" style="font-family: 'jua'; color: #FFBF00; margin-left:15%; font-size: 25px;"  href="${pageContext.request.contextPath }/home.do">COUPKEEP</a>
 		<ul class="navbar-nav" >
 			<li class="nav-item"><a id="menu1" class="nav-link " href="${pageContext.request.contextPath}/jsp/login/user/private/coupkeep.do" style="font-family: 'jua';color: #754F44; font-size: 18px;">CoupKeep</a></li>
 			<li class="nav-item"><a id="menu2" class="nav-link" href="${pageContext.request.contextPath}/jsp/login/ceo/private/coupgive.do"style="font-family: 'jua';color: #754F44; font-size: 18px;">CoupGive</a></li>

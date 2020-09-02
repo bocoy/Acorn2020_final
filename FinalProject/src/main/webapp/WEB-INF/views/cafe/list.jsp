@@ -21,8 +21,7 @@
 	</jsp:include>
 
 	<div class="container">
-		<a href="private/insertform.do">새글 작성</a>
-		<h1>글 목록 입니다.</h1>
+		<h1 class="text-center">CafeStroy</h1>
 		<table class="table table-striped table-sm">
 			<thead class="thead-dark">
 				<tr>
@@ -74,7 +73,8 @@
 				<option value="writer" <c:if test="${condition eq 'writer' }">selected</c:if>>작성자</option>
 			</select>
 			<input value="${keyword }" type="text" name="keyword" placeholder="검색어..."/>
-			<button type="submit">검색</button>
+			<button type="submit" class="btn btn-outline-info">검색</button>
+			<button type="button" class="btn-lg float-right btn-outline-primary" onclick="location.href='newtextform.do'">새글 작성</button>
 		</form>	
 	</div>
 
