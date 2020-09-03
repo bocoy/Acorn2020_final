@@ -6,10 +6,12 @@
 	<typeAliases >
 		<typeAlias type="com.acorn.fin.user.dto.UserDto" alias="userDto"/>
 		<typeAlias type="com.acorn.fin.ceo.dto.CeoDto" alias="ceoDto"/>
+		<typeAlias type="com.acorn.fin.cafe.dto.CafeDto" alias="cafeDto"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="com/acorn/fin/mybatis/UserMapper.xml"/>
 		<mapper resource="com/acorn/fin/mybatis/CeoMapper.xml"/>
+		<mapper resource="com/acorn/fin/mybatis/CafeMapper.xml"/>
 	</mappers>
 </configuration>
 

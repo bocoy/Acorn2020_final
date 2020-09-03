@@ -16,10 +16,6 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping("/cafe/list")
-	public String list() {
-		return "cafe/list";
-	}
 	
 	@RequestMapping("/navbar")
 	public String navbar() {
