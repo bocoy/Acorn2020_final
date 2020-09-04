@@ -20,30 +20,26 @@
 		<jsp:param value="index" name="thisPage"/>
 	</jsp:include>
 
-	<div class="container">
+	<div class="container mt-2">
 		<h1 class="text-center">CafeStroy</h1>
-		<table class="table table-striped table-sm">
-			<thead class="thead-dark">
-				<tr>
-					<th>글번호</th>
-					<th>작성자</th>
-					<th>제목</th>
-					<th>조회수</th>
-					<th>등록일</th>
-				</tr>
-			</thead>
-			<tbody>
-			<c:forEach var="tmp" items="${list }">
-				<tr>
-					<td>${tmp.num }</td>
-					<td>${tmp.writer }</td>
-					<td><a href="detail.do?num=${tmp.num }&condition=${condition }&keyword=${encodedK }">${tmp.title }</a></td>
-					<td>${tmp.viewCount }</td>
-					<td>${tmp.regdate }</td>
-				</tr>
+		<c:forEach var="tmp" items="${list }">	
+			<div class="row">
+		        <div class="col-6">
+		          <p>${tmp.num }</p>
+			          <div class="card">
+			            <div class="card-header" style=" background-color: rgba(251, 255, 185, 0.8);">
+			              ${tmp.writer }
+			            </div>
+			            	조회수: ${tmp.viewCount }
+			            <div class="card-body">
+			              <h1 class="card-title">${tmp.title }</h1>
+			              <p class="card-text">${tmp.regdate }</p>
+			              <a href="#" class="btn btn-primary">More</a>
+			            </div>
+			          </div>
+		          </div>
+	          </div>
 			</c:forEach>		
-			</tbody>
-		</table>
 		<div class="page-display">
 			<ul class="pagination pagination-sm">
 			<c:if test="${startPageNum ne 1 }">
@@ -65,7 +61,7 @@
 			</ul>	
 		</div>
 		<hr style="clear:left;"/>
-		<form action="list.do" method="get">
+		<form action="list.do" method="get" class="mb-5">
 			<label for="condition">검색조건</label>
 			<select name="condition" id="condition">
 				<option value="title_content" <c:if test="${condition eq 'title_content' }">selected</c:if>>제목+내용</option>
